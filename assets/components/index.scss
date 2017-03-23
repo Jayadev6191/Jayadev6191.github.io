@@ -1,0 +1,21 @@
+html,body {
+  padding: 0;
+  margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import './navigation_bar.scss';
+@import './intro.scss';
+@import './what_i_do.scss';
+@import './about_me.scss';
+@import './my_works.scss';
+@import './technology_stack.scss';
+@import './other_interests.scss';
+@import './get_in_touch.scss';
+
+.portfolio-app {
+  display: flex;
+  flex-direction: column;
+}

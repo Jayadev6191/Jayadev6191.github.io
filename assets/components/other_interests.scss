@@ -1,0 +1,110 @@
+@keyframes drone {
+  0% {
+      margin-left: -60%;
+  }
+
+  50% {
+      margin-left: 60%;
+  }
+
+  100% {
+      margin-left: -60%;
+  }
+}
+
+.portfolio-other_interests{
+  padding: 10.0rem 0;
+
+  h3 {
+    color: #333;
+    font-family: 'Roboto Slab',serif !important;
+  }
+
+  #drone {
+    -webkit-animation: drone 6s infinite;
+    width: 14.4em;
+    height: 10.4em;
+  }
+
+
+  &--drone {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+
+  &--header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      font-family: 'Roboto Slab',serif;
+      margin: 0 0 20px;
+      line-height: 1.1;
+      color: #333;
+    }
+
+  }
+
+
+  &--content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &--item {
+      text-align: center;
+      margin-bottom: 30px;
+      cursor: pointer;
+      width: 25%;
+
+      h2{
+        font-size: 24px;
+        -webkit-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+        font-family: 'Roboto Slab',serif;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        margin: 0 0 20px;
+        color: #333;
+      }
+
+      p {
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 300;
+        margin-bottom: 20px;
+      }
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 30px;
+        -webkit-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+      }
+
+      img {
+        max-width: 100%;
+        width: 14.4em;
+        height: 10.4em;
+
+        .img-center {
+            margin: 0 auto;
+        }
+      }
+
+    }
+}
