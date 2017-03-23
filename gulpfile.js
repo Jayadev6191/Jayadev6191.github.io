@@ -44,6 +44,8 @@ gulp.task('server', function(){
     });
 });
 
+gulp.task('build',['bundle','sass']);
+
 gulp.task('default',['server'],function(){
   gulp.watch('assets/**/*.scss',['sass']);
   gulp.watch('src/**/*.js',['bundle']);
