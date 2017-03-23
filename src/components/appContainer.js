@@ -8,6 +8,7 @@ import MyWorks from './my_works';
 import TechnologyStack from './technology_stack';
 import OtherInterests from './other_interests';
 import GetInTouch from './get_in_touch';
+import Footer from './footer';
 
 
 export default class AppContainer extends React.Component {
@@ -22,6 +23,7 @@ export default class AppContainer extends React.Component {
           <TechnologyStack/>
           <OtherInterests/>
           <GetInTouch/>
+          <Footer/>
       </div>
     )
   }
