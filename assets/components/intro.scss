@@ -67,8 +67,8 @@
         -webkit-animation:code 4s linear infinite;
 				animation: code 4s linear infinite;
         img {
-          height: 25rem;
-					width: 45rem;
+          height: 25rem !important;
+					width: 45rem !important;
         }
       }
     }

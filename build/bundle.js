@@ -20691,6 +20691,10 @@ var _get_in_touch = require('./get_in_touch');
 
 var _get_in_touch2 = _interopRequireDefault(_get_in_touch);
 
+var _footer = require('./footer');
+
+var _footer2 = _interopRequireDefault(_footer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20721,7 +20725,8 @@ var AppContainer = function (_React$Component) {
         _react2.default.createElement(_my_works2.default, null),
         _react2.default.createElement(_technology_stack2.default, null),
         _react2.default.createElement(_other_interests2.default, null),
-        _react2.default.createElement(_get_in_touch2.default, null)
+        _react2.default.createElement(_get_in_touch2.default, null),
+        _react2.default.createElement(_footer2.default, null)
       );
     }
   }]);
@@ -20731,7 +20736,71 @@ var AppContainer = function (_React$Component) {
 
 exports.default = AppContainer;
 
-},{"./about_me":179,"./get_in_touch":181,"./intro":183,"./my_works":184,"./navigation_bar":185,"./other_interests":186,"./technology_stack":187,"./what_i_do":188,"react":178,"react-dom":27}],181:[function(require,module,exports){
+},{"./about_me":179,"./footer":181,"./get_in_touch":182,"./intro":184,"./my_works":185,"./navigation_bar":186,"./other_interests":187,"./technology_stack":188,"./what_i_do":189,"react":178,"react-dom":27}],181:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var FooterBar = function (_React$Component) {
+  _inherits(FooterBar, _React$Component);
+
+  function FooterBar() {
+    _classCallCheck(this, FooterBar);
+
+    return _possibleConstructorReturn(this, (FooterBar.__proto__ || Object.getPrototypeOf(FooterBar)).apply(this, arguments));
+  }
+
+  _createClass(FooterBar, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'portfolio-footer' },
+        _react2.default.createElement(
+          'div',
+          { className: 'portfolio-footer--credits' },
+          'Powered by github'
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'portfolio-footer--brand' },
+          _react2.default.createElement(
+            'span',
+            { className: 'portfolio-footer--copy-rights' },
+            '\xA9 '
+          ),
+          '2017 Jayadev Akkiraju'
+        )
+      );
+    }
+  }]);
+
+  return FooterBar;
+}(_react2.default.Component);
+
+exports.default = FooterBar;
+
+},{"react":178,"react-dom":27}],182:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20896,7 +20965,7 @@ exports.default = GetInTouch;
    </form>
    */}
 
-},{"classnames":1,"react":178,"react-dom":27}],182:[function(require,module,exports){
+},{"classnames":1,"react":178,"react-dom":27}],183:[function(require,module,exports){
 'use strict';
 
 var _react = require('react');
@@ -20913,7 +20982,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 (0, _reactDom.render)(_react2.default.createElement(_appContainer2.default, null), document.getElementById('app'));
 
-},{"./appContainer":180,"react":178,"react-dom":27}],183:[function(require,module,exports){
+},{"./appContainer":180,"react":178,"react-dom":27}],184:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -20995,7 +21064,7 @@ var Intro = function (_React$Component) {
 
 exports.default = Intro;
 
-},{"react":178,"react-dom":27}],184:[function(require,module,exports){
+},{"react":178,"react-dom":27}],185:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21142,7 +21211,7 @@ var AboutMe = function (_React$Component) {
 
 exports.default = AboutMe;
 
-},{"react":178,"react-dom":27}],185:[function(require,module,exports){
+},{"react":178,"react-dom":27}],186:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21231,7 +21300,7 @@ var NavigationBar = function (_React$Component) {
 
 exports.default = NavigationBar;
 
-},{"react":178,"react-dom":27}],186:[function(require,module,exports){
+},{"react":178,"react-dom":27}],187:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21307,7 +21376,7 @@ var OtherInterests = function (_React$Component) {
 
 exports.default = OtherInterests;
 
-},{"react":178,"react-dom":27}],187:[function(require,module,exports){
+},{"react":178,"react-dom":27}],188:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21541,7 +21610,7 @@ var TechnologyStack = function (_React$Component) {
 
 exports.default = TechnologyStack;
 
-},{"react":178,"react-dom":27}],188:[function(require,module,exports){
+},{"react":178,"react-dom":27}],189:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21694,4 +21763,4 @@ var WhatIDo = function (_React$Component) {
 
 exports.default = WhatIDo;
 
-},{"react":178,"react-dom":27}]},{},[182]);
+},{"react":178,"react-dom":27}]},{},[183]);
