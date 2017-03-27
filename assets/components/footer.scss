@@ -1,0 +1,22 @@
+.portfolio-footer {
+  display: flex;
+  background-color: #1D2026;
+  border-top: 2px solid #16181d;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0.5rem;
+  &--credits {
+    color: #FFFFFF;
+    margin-left: 5rem;
+    font-size: 16px;
+  }
+  &--brand {
+    color: #FFFFFF;
+    margin-right: 10rem;
+    font-size: 16px;
+  }
+  &--copy-rights {
+    font-size: 12px;
+    vertical-align: top;
+  }
+}
