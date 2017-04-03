@@ -10,7 +10,7 @@ export default class AboutMe extends React.Component {
                 <h1 className="in">My Works</h1>
               </div>
               <div className="portfolio-my_works--content">
-                <div className="portfolio-my_works--item">
+                <div className="portfolio-image--item">
                   <div className="icon">
                     <img className="img-responsive img-center" src="assets/images/uttc_teaser.png" alt="" />
                   </div>
@@ -19,7 +19,7 @@ export default class AboutMe extends React.Component {
                   <p>United Tribes Technical College (UTTC) Project offers educational programs tailored to aid and improve professional development among the Native American community. </p>
                 </div>
 
-                <div className="portfolio-my_works--item">
+                <div className="portfolio-image--item">
                   <div className="icon">
                     <img className="img-responsive img-center" src="assets/images/auction.png" alt="" />
                   </div>
@@ -28,7 +28,7 @@ export default class AboutMe extends React.Component {
       						<p>Fantasy football league is an online bidding game.The aim of the game is to build a fantasy football team on a weekly basis. </p>
                 </div>
 
-                <div className="portfolio-my_works--item">
+                <div className="portfolio-image--item">
                   <div className="icon">
                     <img className="img-responsive img-center" id="next_africa" src="assets/images/next_africa.png" alt="" />
                   </div>
@@ -37,7 +37,7 @@ export default class AboutMe extends React.Component {
       						<p>Next Africa is a community which connects African business leaders to world class career development opportunities. The link for this project is available at <a href="https://nextafrica.kornferry.com/">nextafrica.kornferry.com</a></p>
                 </div>
 
-                <div className="portfolio-my_works--item">
+                <div className="portfolio-image--item">
                   <div className="icon">
                     <img className="img-responsive img-center" src="assets/images/web_rtc.png" alt="" />
                   </div>

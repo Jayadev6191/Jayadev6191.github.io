@@ -15,7 +15,7 @@ export default class WhatIDo extends React.Component {
               </div>
 
               <div className="portfolio-what--content">
-                <div className="portfolio-what--item">
+                <div className="portfolio-image--item">
                   <div className="icon">
                     <img className="img-responsive img-center" src="assets/images/web_design.png"  alt="" />
                   </div>
@@ -23,7 +23,7 @@ export default class WhatIDo extends React.Component {
                   <p>Responsive Web, Story boarding, wireframes, sass</p>
                 </div>
 
-                <div className="portfolio-what--item">
+                <div className="portfolio-image--item">
                   <div className="icon">
                     <img className="img-responsive img-center" src="assets/images/web_development.png" alt="" />
                   </div>
@@ -31,7 +31,7 @@ export default class WhatIDo extends React.Component {
                   <p>DOM, Scripting, Templating, Prototypes, Real-time Web</p>
                 </div>
 
-                <div className="portfolio-what--item">
+                <div className="portfolio-image--item">
                   <div className="icon">
                     <img className="img-responsive img-center" src="assets/images/seo.png" alt="" />
                   </div>
@@ -39,7 +39,7 @@ export default class WhatIDo extends React.Component {
                   <p>Robots.txt, Google Webmaster, Meta Tags, Site.xml</p>
                 </div>
 
-                <div className="portfolio-what--item">
+                <div className="portfolio-image--item">
                   <div className="icon">
                     <img className="img-responsive img-center" src="assets/images/cloud.png" alt="" />
                   </div>
