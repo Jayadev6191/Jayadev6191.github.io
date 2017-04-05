@@ -19,6 +19,14 @@ html,body {
   flex-direction: column;
 }
 
+.portfolio-section {
+  padding: 10.0rem 0;
+
+  &--dark {
+    background-color: #202020;
+  }
+}
+
 
 .portfolio-image--item:hover {
     h2{

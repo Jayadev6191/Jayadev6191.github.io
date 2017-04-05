@@ -21020,37 +21020,41 @@ var Intro = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'portfolio-intro' },
+        'section',
+        { className: 'portfolio-section portfolio-section--dark' },
         _react2.default.createElement(
-          'section',
-          { className: 'portfolio-intro--container' },
+          'div',
+          { className: 'portfolio-intro' },
           _react2.default.createElement(
             'div',
-            { className: 'portfolio-intro--message' },
-            _react2.default.createElement(
-              'h1',
-              { className: 'in' },
-              'Hi, I am Jayadev'
-            ),
-            _react2.default.createElement(
-              'p',
-              { className: 'in' },
-              'a Full Stack Web Developer'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'portfolio-intro--mac' },
-            _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/imac.png', alt: '' }),
+            { className: 'portfolio-intro--container' },
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-code' },
+              { className: 'portfolio-intro--message' },
+              _react2.default.createElement(
+                'h1',
+                { className: 'in' },
+                'Hi, I am Jayadev'
+              ),
+              _react2.default.createElement(
+                'p',
+                { className: 'in' },
+                'a Full Stack Web Developer'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'portfolio-intro--mac' },
+              _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/imac.png', alt: '' }),
               _react2.default.createElement(
                 'div',
-                { className: 'portfolio-code--snippet' },
-                _react2.default.createElement('img', { className: 'portfolio-code--image', src: 'assets/images/code.gif', alt: '' }),
-                _react2.default.createElement('img', { className: 'portfolio-code--image', src: 'assets/images/code.gif', alt: '' })
+                { className: 'portfolio-code' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'portfolio-code--snippet' },
+                  _react2.default.createElement('img', { className: 'portfolio-code--image', src: 'assets/images/code.gif', alt: '' }),
+                  _react2.default.createElement('img', { className: 'portfolio-code--image', src: 'assets/images/code.gif', alt: '' })
+                )
               )
             )
           )
@@ -21648,11 +21652,11 @@ var WhatIDo = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'portfolio-what', id: 'what_i_do' },
+        'section',
+        { className: 'portfolio-section' },
         _react2.default.createElement(
-          'section',
-          { className: 'portfolio-what--container' },
+          'div',
+          { className: 'portfolio-what', id: 'what_i_do' },
           _react2.default.createElement(
             'div',
             { className: 'portfolio-what--header' },
