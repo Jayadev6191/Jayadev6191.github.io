@@ -21106,103 +21106,99 @@ var AboutMe = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'portfolio-my_works', id: 'my_works' },
+        'section',
+        { className: 'portfolio-section' },
         _react2.default.createElement(
-          'section',
-          { className: 'portfolio-my_works--container' },
+          'div',
+          { className: 'portfolio-my_works--header' },
+          _react2.default.createElement(
+            'h1',
+            { className: 'in' },
+            'My Works'
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'portfolio-my_works--content' },
           _react2.default.createElement(
             'div',
-            { className: 'portfolio-my_works--header' },
+            { className: 'portfolio-image--item' },
             _react2.default.createElement(
-              'h1',
-              { className: 'in' },
-              'My Works'
+              'div',
+              { className: 'icon' },
+              _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/uttc_teaser.png', alt: '' })
+            ),
+            _react2.default.createElement(
+              'h2',
+              null,
+              'UTTC'
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              'United Tribes Technical College (UTTC) Project offers educational programs tailored to aid and improve professional development among the Native American community. '
             )
           ),
           _react2.default.createElement(
             'div',
-            { className: 'portfolio-my_works--content' },
+            { className: 'portfolio-image--item' },
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-image--item' },
-              _react2.default.createElement(
-                'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/uttc_teaser.png', alt: '' })
-              ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'UTTC'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'United Tribes Technical College (UTTC) Project offers educational programs tailored to aid and improve professional development among the Native American community. '
-              )
+              { className: 'icon' },
+              _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/auction.png', alt: '' })
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
-              _react2.default.createElement(
-                'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/auction.png', alt: '' })
-              ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'Fantasy Football'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Fantasy football league is an online bidding game.The aim of the game is to build a fantasy football team on a weekly basis. '
-              )
+              'h2',
+              null,
+              'Fantasy Football'
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
-              _react2.default.createElement(
-                'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', id: 'next_africa', src: 'assets/images/next_africa.png', alt: '' })
-              ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'Next Africa'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Next Africa is a community which connects African business leaders to world class career development opportunities. The link for this project is available at ',
-                _react2.default.createElement(
-                  'a',
-                  { href: 'https://nextafrica.kornferry.com/' },
-                  'nextafrica.kornferry.com'
-                )
-              )
-            ),
+              'p',
+              null,
+              'Fantasy football league is an online bidding game.The aim of the game is to build a fantasy football team on a weekly basis. '
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'portfolio-image--item' },
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-image--item' },
+              { className: 'icon' },
+              _react2.default.createElement('img', { className: 'img-responsive img-center', id: 'next_africa', src: 'assets/images/next_africa.png', alt: '' })
+            ),
+            _react2.default.createElement(
+              'h2',
+              null,
+              'Next Africa'
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              'Next Africa is a community which connects African business leaders to world class career development opportunities. The link for this project is available at ',
               _react2.default.createElement(
-                'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/web_rtc.png', alt: '' })
-              ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'Video Calling App'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Video chat application is built using web RTC technology. The users of this application can join the video conference by joining the room which is already created by the host.'
+                'a',
+                { href: 'https://nextafrica.kornferry.com/' },
+                'nextafrica.kornferry.com'
               )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'portfolio-image--item' },
+            _react2.default.createElement(
+              'div',
+              { className: 'icon' },
+              _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/web_rtc.png', alt: '' })
+            ),
+            _react2.default.createElement(
+              'h2',
+              null,
+              'Video Calling App'
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              'Video chat application is built using web RTC technology. The users of this application can join the video conference by joining the room which is already created by the host.'
             )
           )
         )
