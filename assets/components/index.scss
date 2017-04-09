@@ -38,6 +38,21 @@ html,body {
     }
 }
 
+
+
+.portfolio-section {
+  h2{
+    color:#000000;
+  }
+
+  &--dark {
+    h2{
+      color:#FFFFFF;
+    }
+  }
+}
+
+
 .portfolio-image--item {
     text-align: center;
     margin-bottom: 30px;
