@@ -5,6 +5,7 @@ export default class TechnologyStack extends React.Component {
   render(){
     return (
           <section className="portfolio-section portfolio-section--dark">
+            <div className="portfolio-technology_stack">
             <div className="portfolio-technology_stack--header">
               <h1 className="in">Technology Stack</h1>
             </div>
@@ -92,6 +93,7 @@ export default class TechnologyStack extends React.Component {
                 </div>
                 <h2>Backbone.js</h2>
               </div>
+            </div>
             </div>
     			</section>
     )
