@@ -20779,7 +20779,8 @@ var FooterBar = function (_React$Component) {
         _react2.default.createElement(
           'div',
           { className: 'portfolio-footer--credits' },
-          'Powered by github'
+          _react2.default.createElement('i', { id: 'icon-github', className: 'fa fa-github', 'aria-hidden': 'true' }),
+          ' Powered by github'
         ),
         _react2.default.createElement(
           'div',
@@ -20832,45 +20833,31 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var GetInTouch = function (_React$Component) {
   _inherits(GetInTouch, _React$Component);
 
-  function GetInTouch(props) {
+  function GetInTouch() {
     _classCallCheck(this, GetInTouch);
 
-    var _this = _possibleConstructorReturn(this, (GetInTouch.__proto__ || Object.getPrototypeOf(GetInTouch)).call(this, props));
-
-    _this.onNameChange = function (e) {
-      _this.setState({ name: e.target.value });
-    };
-
-    _this.onEmailChange = function (e) {
-      _this.setState({ email: e.target.value });
-    };
-
-    _this.state = {
-      name: '',
-      email: ''
-    };
-    return _this;
+    return _possibleConstructorReturn(this, (GetInTouch.__proto__ || Object.getPrototypeOf(GetInTouch)).apply(this, arguments));
   }
 
   _createClass(GetInTouch, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'portfolio-get_in_touch', id: 'contact_me' },
+        'section',
+        { className: 'portfolio-section portfolio-section--dark' },
         _react2.default.createElement(
-          'section',
-          { className: 'portfolio-get_in_touch--container' },
+          'div',
+          { className: 'portfolio-get_in_touch' },
           _react2.default.createElement(
             'div',
-            { className: 'portfolio-get_in_touch--header' },
+            { className: 'portfolio-get_in_touch--header', id: 'contact_me' },
             _react2.default.createElement(
               'h1',
               { className: 'portfolio-get_in_touch--header-title' },
               'Get In Touch'
             ),
             _react2.default.createElement(
-              'p',
+              'h5',
               { className: 'portfolio-get_in_touch--header-subtitle' },
               ' \uD83D\uDC4B Don\'t forget to say hello! \uD83E\uDD19\uD83D\uDE00'
             )
@@ -20935,36 +20922,6 @@ var GetInTouch = function (_React$Component) {
 
 exports.default = GetInTouch;
 
-
-{/*
-   <form className="portfolio-get_in_touch--form" autoComplete="off">
-     <div className="portfolio-get_in_touch--form-row">
-       <div className="portfolio-get_in_touch--form-row--item">
-         <input type="text" className={classNames("form-control",this.state.name!=='' ? "valid" : '')}
-                value={this.state.name}
-                onChange={this.onNameChange}
-         />
-         <label>Name</label>
-       </div>
-       <div className="portfolio-get_in_touch--form-row--item">
-         <input type="text" className={classNames("form-control",this.state.email!=='' ? "valid" : '')}
-                value={this.state.email}
-                onChange={this.onEmailChange}
-         />
-         <label>Email</label>
-       </div>
-     </div>
-     <div className="portfolio-get_in_touch--form-row--item">
-       <textarea className="form-control" rows="5" placeholder="Don't forget to say hi! 😀" id="comment"></textarea>
-     </div>
-     <div className="portfolio-get_in_touch--form-row--item">
-       <button className="btn btn-success" id="send_mail_button">
-         <i className="fa fa-paper-plane"></i> Send Mail
-       </button>
-     </div>
-   </form>
-   */}
-
 },{"classnames":1,"react":178,"react-dom":27}],183:[function(require,module,exports){
 'use strict';
 
@@ -21020,37 +20977,41 @@ var Intro = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'portfolio-intro' },
+        'section',
+        { className: 'portfolio-section portfolio-section--dark' },
         _react2.default.createElement(
-          'section',
-          { className: 'portfolio-intro--container' },
+          'div',
+          { className: 'portfolio-intro' },
           _react2.default.createElement(
             'div',
-            { className: 'portfolio-intro--message' },
-            _react2.default.createElement(
-              'h1',
-              { className: 'in' },
-              'Hi, I am Jayadev'
-            ),
-            _react2.default.createElement(
-              'p',
-              { className: 'in' },
-              'a Full Stack Web Developer'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'portfolio-intro--mac' },
-            _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/imac.png', alt: '' }),
+            { className: 'portfolio-intro--container' },
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-code' },
+              { className: 'portfolio-intro--message' },
+              _react2.default.createElement(
+                'h1',
+                { className: 'in' },
+                'Hi, I am Jayadev'
+              ),
+              _react2.default.createElement(
+                'p',
+                { className: 'in' },
+                'a Full Stack Web Developer'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'portfolio-intro--mac' },
+              _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/imac.png', alt: '' }),
               _react2.default.createElement(
                 'div',
-                { className: 'portfolio-code--snippet' },
-                _react2.default.createElement('img', { className: 'portfolio-code--image', src: 'assets/images/code.gif', alt: '' }),
-                _react2.default.createElement('img', { className: 'portfolio-code--image', src: 'assets/images/code.gif', alt: '' })
+                { className: 'portfolio-code' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'portfolio-code--snippet' },
+                  _react2.default.createElement('img', { className: 'portfolio-code--image', src: 'assets/images/code.gif', alt: '' }),
+                  _react2.default.createElement('img', { className: 'portfolio-code--image', src: 'assets/images/code.gif', alt: '' })
+                )
               )
             )
           )
@@ -21102,11 +21063,11 @@ var AboutMe = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'portfolio-my_works', id: 'my_works' },
+        'section',
+        { className: 'portfolio-section' },
         _react2.default.createElement(
-          'section',
-          { className: 'portfolio-my_works--container' },
+          'div',
+          { className: 'portfolio-my_works', id: 'my_works' },
           _react2.default.createElement(
             'div',
             { className: 'portfolio-my_works--header' },
@@ -21121,7 +21082,7 @@ var AboutMe = function (_React$Component) {
             { className: 'portfolio-my_works--content' },
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-my_works--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21140,7 +21101,7 @@ var AboutMe = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-my_works--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21159,7 +21120,7 @@ var AboutMe = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-my_works--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21183,7 +21144,7 @@ var AboutMe = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-my_works--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21338,11 +21299,11 @@ var OtherInterests = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'portfolio-other_interests' },
+        'section',
+        { className: 'portfolio-section' },
         _react2.default.createElement(
-          'section',
-          { className: 'portfolio-other_interests--container' },
+          'div',
+          { className: 'portfolio-other_interests' },
           _react2.default.createElement(
             'div',
             { className: 'portfolio-other_interests--header' },
@@ -21414,11 +21375,11 @@ var TechnologyStack = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'portfolio-technology_stack' },
+        'section',
+        { className: 'portfolio-section portfolio-section--dark' },
         _react2.default.createElement(
-          'section',
-          { className: 'portfolio-technology_stack--container' },
+          'div',
+          { className: 'portfolio-technology_stack' },
           _react2.default.createElement(
             'div',
             { className: 'portfolio-technology_stack--header' },
@@ -21433,7 +21394,7 @@ var TechnologyStack = function (_React$Component) {
             { className: 'portfolio-technology_stack--content' },
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-technology_stack--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21447,7 +21408,7 @@ var TechnologyStack = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-technology_stack--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21461,7 +21422,7 @@ var TechnologyStack = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-technology_stack--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21475,7 +21436,7 @@ var TechnologyStack = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-technology_stack--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21489,7 +21450,7 @@ var TechnologyStack = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-technology_stack--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21503,7 +21464,7 @@ var TechnologyStack = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-technology_stack--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21517,7 +21478,7 @@ var TechnologyStack = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-technology_stack--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21531,7 +21492,7 @@ var TechnologyStack = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-technology_stack--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21545,7 +21506,7 @@ var TechnologyStack = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-technology_stack--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21559,7 +21520,7 @@ var TechnologyStack = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-technology_stack--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21573,7 +21534,7 @@ var TechnologyStack = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-technology_stack--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21587,7 +21548,7 @@ var TechnologyStack = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-technology_stack--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21648,11 +21609,11 @@ var WhatIDo = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'portfolio-what', id: 'what_i_do' },
+        'section',
+        { className: 'portfolio-section' },
         _react2.default.createElement(
-          'section',
-          { className: 'portfolio-what--container' },
+          'div',
+          { className: 'portfolio-what', id: 'what_i_do' },
           _react2.default.createElement(
             'div',
             { className: 'portfolio-what--header' },
@@ -21678,7 +21639,7 @@ var WhatIDo = function (_React$Component) {
             { className: 'portfolio-what--content' },
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-what--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21697,7 +21658,7 @@ var WhatIDo = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-what--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21716,7 +21677,7 @@ var WhatIDo = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-what--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },
@@ -21735,7 +21696,7 @@ var WhatIDo = function (_React$Component) {
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-what--item' },
+              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
                 { className: 'icon' },

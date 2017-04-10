@@ -25,9 +25,7 @@
 }
 
 
-.portfolio-intro{
-  padding: 10.0rem 0;
-  background-color: #202020;
+.portfolio-intro {
 
   @media (min-width: 1200px) {
       min-height: 660px;
@@ -36,6 +34,7 @@
   &--container {
     display: flex;
     justify-content: space-around;
+		padding: 5rem 5rem;
   }
   &--message {
     padding: 1.0rem 2.5rem;
@@ -43,11 +42,11 @@
 
     h1 {
       font-size: 61.6667px;
-			font-family: 'Indie Flower',serif;
+			font-family: 'Roboto Slab',serif;
     }
     p {
       font-size: 32px;
-			font-family: 'Indie Flower',serif;
+			font-family: 'Roboto Slab',serif;
     }
   }
   &--mac {
@@ -73,4 +72,5 @@
       }
     }
   }
+
 }
