@@ -1,21 +1,10 @@
 @-webkit-keyframes code{
 	0% {
-    transform: translateY(100%);
-  }
-	20% {
-    transform: translateY(80%);
-  }
-	40% {
-    transform: translateY(60%);
-  }
-	60% {
-    transform: translateY(40%);
-  }
-	80% {
-    transform: translateY(20%);
-  }
-	100% {
     transform: translateY(0%);
+  }
+
+	100% {
+    transform: translateY(-100%);
   }
 }
 
@@ -50,7 +39,7 @@
     }
   }
   &--mac {
-    padding: 1.0rem 5.5rem;
+    padding: 1.0rem 4.5rem;
 
     .portfolio-code {
       overflow: hidden;
@@ -59,12 +48,10 @@
       margin-left: 25px;
 
       .portfolio-code--snippet {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
+				width: 480px;
         height: 250px;
-        -webkit-animation:code 4s linear infinite;
-				animation: code 4s linear infinite;
+        -webkit-animation:code 5s linear infinite;
+				animation: code 5s linear infinite;
         img {
           height: 25rem !important;
 					width: 45rem !important;

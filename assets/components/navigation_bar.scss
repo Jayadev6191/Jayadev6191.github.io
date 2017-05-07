@@ -1,8 +1,8 @@
 .portfolio-navigation{
-  display: flex;
-  justify-content:center;
-  align-items: center;
+  width: 100%;
   background-color: #FFFFFF;
+  z-index: 600;
+  position: fixed;
   &__list {
     list-style: none;
     display: flex;
@@ -14,7 +14,8 @@
       margin: 0 20px;
     }
     &--link {
-      padding: 0px 5px;
+      cursor: pointer;
+      padding-bottom: 5px;
       font-size: 15px;
       line-height: 54px;
       font-weight: 700;
@@ -24,6 +25,11 @@
       text-decoration: none;
       color:#3a3c4a;
       font-family: 'Titillium Web', sans-serif;
+
+      &:hover{
+        border-bottom: 3px solid #202020;
+        text-decoration: none;
+      }
     }
   }
 }
