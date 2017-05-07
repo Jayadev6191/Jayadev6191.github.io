@@ -16,7 +16,7 @@
 4 verbose stack     at tryToString (fs.js:448:3)
 4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:435:12)
 5 verbose cwd /Users/jakkiraju/Desktop/Jayadev6191.github.io
-6 error Darwin 16.4.0
+6 error Darwin 16.5.0
 7 error argv "/Users/jakkiraju/.nvm/versions/node/v7.7.2/bin/node" "/Users/jakkiraju/.nvm/versions/node/v7.7.2/bin/npm" "start"
 8 error node v7.7.2
 9 error npm  v4.1.2

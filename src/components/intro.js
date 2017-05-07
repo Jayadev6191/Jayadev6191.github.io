@@ -12,7 +12,7 @@ export default class Intro extends React.Component {
                 <p className="in">a Full Stack Web Developer</p>
               </div>
               <div className="portfolio-intro--mac">
-                <img className="img-responsive img-center" src="assets/images/imac.png" alt="" />
+                <img src="assets/images/imac.png" alt="" />
                 <div className="portfolio-code">
                   <div className="portfolio-code--snippet">
                     <img className="portfolio-code--image" src="assets/images/code.gif" alt="" />
