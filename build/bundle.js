@@ -21053,7 +21053,7 @@ var Intro = function (_React$Component) {
             _react2.default.createElement(
               'div',
               { className: 'portfolio-intro--mac' },
-              _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/imac.png', alt: '' }),
+              _react2.default.createElement('img', { src: 'assets/images/imac.png', alt: '' }),
               _react2.default.createElement(
                 'div',
                 { className: 'portfolio-code' },
@@ -21441,7 +21441,6 @@ var ScrollToTop = function (_React$Component) {
     value: function render() {
       var showScrollTop = this.props.showScrollTop;
 
-      console.log(showScrollTop);
       return showScrollTop && _react2.default.createElement(
         'div',
         { className: 'portfolio-go_top', onClick: this.rollUp },
