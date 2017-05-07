@@ -20659,6 +20659,10 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _scroll_to_top = require('./scroll_to_top');
+
+var _scroll_to_top2 = _interopRequireDefault(_scroll_to_top);
+
 var _navigation_bar = require('./navigation_bar');
 
 var _navigation_bar2 = _interopRequireDefault(_navigation_bar);
@@ -20706,19 +20710,66 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var AppContainer = function (_React$Component) {
   _inherits(AppContainer, _React$Component);
 
-  function AppContainer() {
+  function AppContainer(props) {
     _classCallCheck(this, AppContainer);
 
-    return _possibleConstructorReturn(this, (AppContainer.__proto__ || Object.getPrototypeOf(AppContainer)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (AppContainer.__proto__ || Object.getPrototypeOf(AppContainer)).call(this, props));
+
+    _this.handleScroll = function (event) {
+      var scrollTop = event.srcElement.body.scrollTop,
+          itemTranslate = Math.min(0, scrollTop / 3 - 60);
+
+      if (scrollTop < 50) {
+        _this.setState({
+          showScrollTop: false
+        });
+      }
+
+      if (scrollTop > 50) {
+        _this.setState({
+          showScrollTop: true
+        });
+      }
+
+      _this.setState({
+        transform: itemTranslate
+      });
+    };
+
+    _this.scrollToTop = function () {
+      var timerID = setInterval(function () {
+        window.scrollBy(0, -100);
+
+        if (window.pageYOffset === 0) clearInterval(timerID);
+      }, 13);
+    };
+
+    _this.state = {
+      showScrollTop: false
+    };
+    return _this;
   }
 
   _createClass(AppContainer, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      window.addEventListener('scroll', this.handleScroll);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      window.removeEventListener('scroll', this.handleScroll);
+    }
+  }, {
     key: 'render',
     value: function render() {
+      var showScrollTop = this.state.showScrollTop;
+
       return _react2.default.createElement(
         'div',
-        { className: 'portfolio-app' },
+        { onScroll: this.scroll, className: 'portfolio-app', ref: 'list' },
         _react2.default.createElement(_navigation_bar2.default, null),
+        _react2.default.createElement(_scroll_to_top2.default, { showScrollTop: showScrollTop, onUpdate: this.scrollToTop }),
         _react2.default.createElement(_intro2.default, null),
         _react2.default.createElement(_what_i_do2.default, null),
         _react2.default.createElement(_about_me2.default, null),
@@ -20736,7 +20787,7 @@ var AppContainer = function (_React$Component) {
 
 exports.default = AppContainer;
 
-},{"./about_me":179,"./footer":181,"./get_in_touch":182,"./intro":184,"./my_works":185,"./navigation_bar":186,"./other_interests":187,"./technology_stack":188,"./what_i_do":189,"react":178,"react-dom":27}],181:[function(require,module,exports){
+},{"./about_me":179,"./footer":181,"./get_in_touch":182,"./intro":184,"./my_works":185,"./navigation_bar":186,"./other_interests":187,"./scroll_to_top":188,"./technology_stack":189,"./what_i_do":190,"react":178,"react-dom":27}],181:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21354,6 +21405,77 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ScrollToTop = function (_React$Component) {
+  _inherits(ScrollToTop, _React$Component);
+
+  function ScrollToTop() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, ScrollToTop);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ScrollToTop.__proto__ || Object.getPrototypeOf(ScrollToTop)).call.apply(_ref, [this].concat(args))), _this), _this.rollUp = function () {
+      _this.props.onUpdate();
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(ScrollToTop, [{
+    key: 'render',
+    value: function render() {
+      var showScrollTop = this.props.showScrollTop;
+
+      console.log(showScrollTop);
+      return showScrollTop && _react2.default.createElement(
+        'div',
+        { className: 'portfolio-go_top', onClick: this.rollUp },
+        _react2.default.createElement(
+          'span',
+          null,
+          _react2.default.createElement('i', { className: 'fa fa-angle-up', 'aria-hidden': 'true' })
+        )
+      );
+    }
+  }]);
+
+  return ScrollToTop;
+}(_react2.default.Component);
+
+exports.default = ScrollToTop;
+
+},{"classnames":1,"react":178,"react-dom":27}],189:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21571,7 +21693,7 @@ var TechnologyStack = function (_React$Component) {
 
 exports.default = TechnologyStack;
 
-},{"react":178,"react-dom":27}],189:[function(require,module,exports){
+},{"react":178,"react-dom":27}],190:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
