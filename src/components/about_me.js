@@ -4,8 +4,9 @@ import ReactDOM from 'react-dom';
 export default class AboutMe extends React.Component {
   render(){
     return (
-      <div className='portfolio-about' id="about_me">
-            <section className="portfolio-about--container">
+        <section className="portfolio-section">
+          <div className='portfolio-section--anchor' id="about_me">
+            <div className="portfolio-about">
               <div className="portfolio-about--header">
                 <h1 className="in">About Me</h1>
                 <img className="" src="assets/images/me.png" />
@@ -25,8 +26,9 @@ export default class AboutMe extends React.Component {
                   <i className="fa fa-child"></i>Hire Me</a>
                 </p>
               </div>
-      			</section>
-      </div>
+            </div>
+          </div>
+  			</section>
     )
   }
 }

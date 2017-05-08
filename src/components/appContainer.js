@@ -16,7 +16,8 @@ export default class AppContainer extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      showScrollTop: false
+      showScrollTop: false,
+      showNavBar: true
     };
   }
   handleScroll = (event) => {
@@ -25,13 +26,15 @@ export default class AppContainer extends React.Component {
 
     if(scrollTop < 50) {
       this.setState({
-        showScrollTop: false
+        showScrollTop: false,
+        showNavBar: true
       });
     }
 
     if(scrollTop > 50) {
       this.setState({
-        showScrollTop: true
+        showScrollTop: true,
+        showNavBar: false
       });
     }
 
@@ -54,10 +57,10 @@ export default class AppContainer extends React.Component {
       window.removeEventListener('scroll', this.handleScroll);
   }
   render(){
-    const {showScrollTop} = this.state;
+    const {showScrollTop, showNavBar} = this.state;
     return (
       <div onScroll={this.scroll} className='portfolio-app' ref='list'>
-          <NavigationBar/>
+          <NavigationBar showNavBar={showNavBar} />
           <ScrollToTop showScrollTop={showScrollTop} onUpdate={this.scrollToTop}/>
           <Intro/>
           <WhatIDo/>
