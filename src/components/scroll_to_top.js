@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import classNames from 'classnames';
 
 export default class ScrollToTop extends React.Component {
   rollUp = () => {

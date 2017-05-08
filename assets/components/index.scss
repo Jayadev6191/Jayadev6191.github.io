@@ -21,8 +21,7 @@ html,body {
 }
 
 .portfolio-section {
-  padding: 10.0rem 0;
-
+  padding: 0 0 5rem 0;
   &--dark {
     background-color: #202020;
   }
@@ -50,6 +49,10 @@ html,body {
     h2{
       color:#FFFFFF;
     }
+  }
+
+  &--anchor {
+    padding-top: 90px;
   }
 }
 

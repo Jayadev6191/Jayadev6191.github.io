@@ -20582,53 +20582,57 @@ var AboutMe = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
-        { className: 'portfolio-about', id: 'about_me' },
+        'section',
+        { className: 'portfolio-section' },
         _react2.default.createElement(
-          'section',
-          { className: 'portfolio-about--container' },
+          'div',
+          { className: 'portfolio-section--anchor', id: 'about_me' },
           _react2.default.createElement(
             'div',
-            { className: 'portfolio-about--header' },
+            { className: 'portfolio-about' },
             _react2.default.createElement(
-              'h1',
-              { className: 'in' },
-              'About Me'
-            ),
-            _react2.default.createElement('img', { className: '', src: 'assets/images/me.png' })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'portfolio-about--content' },
-            _react2.default.createElement(
-              'p',
-              null,
-              'I am Jayadev Akkiraju. I have a Masters degree in Software Engineering, from San Jose ',
-              _react2.default.createElement('br', null),
-              ' State University. Building challenging and interesting computer applications is my number one passion.'
-            )
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement(
-            'div',
-            { className: 'portfolio-about--content' },
-            _react2.default.createElement(
-              'p',
-              null,
-              'I have 4 years of professional experience with Internet technologies'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'portfolio-about--content' },
-            _react2.default.createElement(
-              'p',
-              { className: 'portfolio-about--hire-me' },
+              'div',
+              { className: 'portfolio-about--header' },
               _react2.default.createElement(
-                'a',
-                { className: 'portfolio-about--hire-me-btn', href: '#contact_me' },
-                _react2.default.createElement('i', { className: 'fa fa-child' }),
-                'Hire Me'
+                'h1',
+                { className: 'in' },
+                'About Me'
+              ),
+              _react2.default.createElement('img', { className: '', src: 'assets/images/me.png' })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'portfolio-about--content' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'I am Jayadev Akkiraju. I have a Masters degree in Software Engineering, from San Jose ',
+                _react2.default.createElement('br', null),
+                ' State University. Building challenging and interesting computer applications is my number one passion.'
+              )
+            ),
+            _react2.default.createElement('br', null),
+            _react2.default.createElement(
+              'div',
+              { className: 'portfolio-about--content' },
+              _react2.default.createElement(
+                'p',
+                null,
+                'I have 4 years of professional experience with Internet technologies'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'portfolio-about--content' },
+              _react2.default.createElement(
+                'p',
+                { className: 'portfolio-about--hire-me' },
+                _react2.default.createElement(
+                  'a',
+                  { className: 'portfolio-about--hire-me-btn', href: '#contact_me' },
+                  _react2.default.createElement('i', { className: 'fa fa-child' }),
+                  'Hire Me'
+                )
               )
             )
           )
@@ -20721,13 +20725,15 @@ var AppContainer = function (_React$Component) {
 
       if (scrollTop < 50) {
         _this.setState({
-          showScrollTop: false
+          showScrollTop: false,
+          showNavBar: true
         });
       }
 
       if (scrollTop > 50) {
         _this.setState({
-          showScrollTop: true
+          showScrollTop: true,
+          showNavBar: false
         });
       }
 
@@ -20745,7 +20751,8 @@ var AppContainer = function (_React$Component) {
     };
 
     _this.state = {
-      showScrollTop: false
+      showScrollTop: false,
+      showNavBar: true
     };
     return _this;
   }
@@ -20763,12 +20770,14 @@ var AppContainer = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var showScrollTop = this.state.showScrollTop;
+      var _state = this.state,
+          showScrollTop = _state.showScrollTop,
+          showNavBar = _state.showNavBar;
 
       return _react2.default.createElement(
         'div',
         { onScroll: this.scroll, className: 'portfolio-app', ref: 'list' },
-        _react2.default.createElement(_navigation_bar2.default, null),
+        _react2.default.createElement(_navigation_bar2.default, { showNavBar: showNavBar }),
         _react2.default.createElement(_scroll_to_top2.default, { showScrollTop: showScrollTop, onUpdate: this.scrollToTop }),
         _react2.default.createElement(_intro2.default, null),
         _react2.default.createElement(_what_i_do2.default, null),
@@ -20898,66 +20907,70 @@ var GetInTouch = function (_React$Component) {
         { className: 'portfolio-section portfolio-section--dark' },
         _react2.default.createElement(
           'div',
-          { className: 'portfolio-get_in_touch' },
+          { className: 'portfolio-section--anchor', id: 'contact_me' },
           _react2.default.createElement(
             'div',
-            { className: 'portfolio-get_in_touch--header', id: 'contact_me' },
-            _react2.default.createElement(
-              'h1',
-              { className: 'portfolio-get_in_touch--header-title' },
-              'Get In Touch'
-            ),
-            _react2.default.createElement(
-              'h5',
-              { className: 'portfolio-get_in_touch--header-subtitle' },
-              ' \uD83D\uDC4B Don\'t forget to say hello! \uD83E\uDD19\uD83D\uDE00'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'portfolio-get_in_touch--content' },
+            { className: 'portfolio-get_in_touch' },
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-get_in_touch--icon-content' },
+              { className: 'portfolio-get_in_touch--header' },
               _react2.default.createElement(
-                'div',
-                { className: 'portfolio-get_in_touch--icon-item' },
-                _react2.default.createElement(
-                  'a',
-                  { target: '_blank', href: 'https://www.linkedin.com/in/jayadev-akkiraju-b947576a/' },
-                  _react2.default.createElement('i', { id: 'icon-linkedin', className: 'fa fa-linkedin', 'aria-hidden': 'true' }),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'portfolio-get_in_touch--icon-text' },
-                    'LinkedIn'
-                  )
-                )
+                'h1',
+                { className: 'portfolio-get_in_touch--header-title' },
+                'Get In Touch'
               ),
               _react2.default.createElement(
-                'div',
-                { className: 'portfolio-get_in_touch--icon-item' },
-                _react2.default.createElement(
-                  'a',
-                  { target: '_blank', href: 'https://github.com/Jayadev6191' },
-                  _react2.default.createElement('i', { id: 'icon-github', className: 'fa fa-github', 'aria-hidden': 'true' }),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'portfolio-get_in_touch--icon-text' },
-                    'Github'
-                  )
-                )
-              ),
+                'h5',
+                { className: 'portfolio-get_in_touch--header-subtitle' },
+                ' \uD83D\uDC4B Don\'t forget to say hello! \uD83E\uDD19\uD83D\uDE00'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'portfolio-get_in_touch--content' },
               _react2.default.createElement(
                 'div',
-                { className: 'portfolio-get_in_touch--icon-item' },
+                { className: 'portfolio-get_in_touch--icon-content' },
                 _react2.default.createElement(
-                  'a',
-                  { target: '_blank', href: 'https://twitter.com/jay_akkiraju' },
-                  _react2.default.createElement('i', { id: 'icon-twitter', className: 'fa fa-twitter', 'aria-hidden': 'true' }),
+                  'div',
+                  { className: 'portfolio-get_in_touch--icon-item' },
                   _react2.default.createElement(
-                    'div',
-                    { className: 'portfolio-get_in_touch--icon-text' },
-                    'Twitter'
+                    'a',
+                    { target: '_blank', href: 'https://www.linkedin.com/in/jayadev-akkiraju-b947576a/' },
+                    _react2.default.createElement('i', { id: 'icon-linkedin', className: 'fa fa-linkedin', 'aria-hidden': 'true' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-get_in_touch--icon-text' },
+                      'LinkedIn'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'portfolio-get_in_touch--icon-item' },
+                  _react2.default.createElement(
+                    'a',
+                    { target: '_blank', href: 'https://github.com/Jayadev6191' },
+                    _react2.default.createElement('i', { id: 'icon-github', className: 'fa fa-github', 'aria-hidden': 'true' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-get_in_touch--icon-text' },
+                      'Github'
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'portfolio-get_in_touch--icon-item' },
+                  _react2.default.createElement(
+                    'a',
+                    { target: '_blank', href: 'https://twitter.com/jay_akkiraju' },
+                    _react2.default.createElement('i', { id: 'icon-twitter', className: 'fa fa-twitter', 'aria-hidden': 'true' }),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'portfolio-get_in_touch--icon-text' },
+                      'Twitter'
+                    )
                   )
                 )
               )
@@ -21032,36 +21045,40 @@ var Intro = function (_React$Component) {
         { className: 'portfolio-section portfolio-section--dark' },
         _react2.default.createElement(
           'div',
-          { className: 'portfolio-intro' },
+          { className: 'portfolio-section--anchor', id: 'intro' },
           _react2.default.createElement(
             'div',
-            { className: 'portfolio-intro--container' },
+            { className: 'portfolio-intro' },
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-intro--message' },
-              _react2.default.createElement(
-                'h1',
-                { className: 'in' },
-                'Hi, I am Jayadev'
-              ),
-              _react2.default.createElement(
-                'p',
-                { className: 'in' },
-                'a Full Stack Web Developer'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-intro--mac' },
-              _react2.default.createElement('img', { src: 'assets/images/imac.png', alt: '' }),
+              { className: 'portfolio-intro--container' },
               _react2.default.createElement(
                 'div',
-                { className: 'portfolio-code' },
+                { className: 'portfolio-intro--message' },
+                _react2.default.createElement(
+                  'h1',
+                  { className: 'in' },
+                  'Hi, I am Jayadev'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  { className: 'in' },
+                  'a Full Stack Web Developer'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'portfolio-intro--mac' },
+                _react2.default.createElement('img', { src: 'assets/images/imac.png', alt: '' }),
                 _react2.default.createElement(
                   'div',
-                  { className: 'portfolio-code--snippet' },
-                  _react2.default.createElement('img', { className: 'portfolio-code--image', src: 'assets/images/code.gif', alt: '' }),
-                  _react2.default.createElement('img', { className: 'portfolio-code--image', src: 'assets/images/code.gif', alt: '' })
+                  { className: 'portfolio-code' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'portfolio-code--snippet' },
+                    _react2.default.createElement('img', { className: 'portfolio-code--image', src: 'assets/images/code.gif', alt: '' }),
+                    _react2.default.createElement('img', { className: 'portfolio-code--image', src: 'assets/images/code.gif', alt: '' })
+                  )
                 )
               )
             )
@@ -21118,98 +21135,102 @@ var AboutMe = function (_React$Component) {
         { className: 'portfolio-section' },
         _react2.default.createElement(
           'div',
-          { className: 'portfolio-my_works', id: 'my_works' },
+          { className: 'portfolio-section--anchor', id: 'my_works' },
           _react2.default.createElement(
             'div',
-            { className: 'portfolio-my_works--header' },
-            _react2.default.createElement(
-              'h1',
-              { className: 'in' },
-              'My Works'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'portfolio-my_works--content' },
+            { className: 'portfolio-my_works' },
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-image--item' },
+              { className: 'portfolio-my_works--header' },
               _react2.default.createElement(
-                'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/uttc_teaser.png', alt: '' })
-              ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'UTTC'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'United Tribes Technical College (UTTC) Project offers educational programs tailored to aid and improve professional development among the Native American community. '
+                'h1',
+                { className: 'in' },
+                'My Works'
               )
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-image--item' },
+              { className: 'portfolio-my_works--content' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/auction.png', alt: '' })
-              ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'Fantasy Football'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Fantasy football league is an online bidding game.The aim of the game is to build a fantasy football team on a weekly basis. '
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
-              _react2.default.createElement(
-                'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', id: 'next_africa', src: 'assets/images/next_africa.png', alt: '' })
-              ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'Next Africa'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Next Africa is a community which connects African business leaders to world class career development opportunities. The link for this project is available at ',
+                { className: 'portfolio-image--item' },
                 _react2.default.createElement(
-                  'a',
-                  { href: 'https://nextafrica.kornferry.com/' },
-                  'nextafrica.kornferry.com'
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/uttc_teaser.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'UTTC'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'United Tribes Technical College (UTTC) Project offers educational programs tailored to aid and improve professional development among the Native American community. '
                 )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
+              ),
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/web_rtc.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/auction.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'Fantasy Football'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'Fantasy football league is an online bidding game.The aim of the game is to build a fantasy football team on a weekly basis. '
+                )
               ),
               _react2.default.createElement(
-                'h2',
-                null,
-                'Video Calling App'
+                'div',
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', id: 'next_africa', src: 'assets/images/next_africa.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'Next Africa'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'Next Africa is a community which connects African business leaders to world class career development opportunities. The link for this project is available at ',
+                  _react2.default.createElement(
+                    'a',
+                    { href: 'https://nextafrica.kornferry.com/' },
+                    'nextafrica.kornferry.com'
+                  )
+                )
               ),
               _react2.default.createElement(
-                'p',
-                null,
-                'Video chat application is built using web RTC technology. The users of this application can join the video conference by joining the room which is already created by the host.'
+                'div',
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/web_rtc.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'Video Calling App'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'Video chat application is built using web RTC technology. The users of this application can join the video conference by joining the room which is already created by the host.'
+                )
               )
             )
           )
@@ -21240,7 +21261,13 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -21260,45 +21287,56 @@ var NavigationBar = function (_React$Component) {
   _createClass(NavigationBar, [{
     key: 'render',
     value: function render() {
+      var _props = this.props,
+          showNavBar = _props.showNavBar,
+          props = _objectWithoutProperties(_props, ['showNavBar']);
+
+      var navClass = (0, _classnames2.default)({
+        'portfolio-navigation': showNavBar,
+        'portfolio-navigation--transparant': !showNavBar
+      });
+
+      var mainClass = null;
+
       return _react2.default.createElement(
         'div',
-        { className: 'portfolio-navigation' },
+        { className: navClass },
         _react2.default.createElement(
           'ul',
-          { className: 'portfolio-navigation__list' },
+          { className: navClass + '__list' },
           _react2.default.createElement(
             'li',
-            { className: 'portfolio-navigation__list-item' },
+            { className: navClass + '__list-item' },
             _react2.default.createElement(
               'a',
-              { href: '#what_i_do', className: 'portfolio-navigation__list--link' },
+              { href: '#what_i_do', className: navClass + '__list--link' },
               'WHAT I DO'
             )
           ),
           _react2.default.createElement(
             'li',
-            { className: 'portfolio-navigation__list-item' },
+            { className: navClass + '__list-item' },
             _react2.default.createElement(
               'a',
-              { href: '#about_me', className: 'portfolio-navigation__list--link' },
+              { href: '#about_me', className: navClass + '__list--link' },
               'ABOUT ME'
             )
           ),
           _react2.default.createElement(
             'li',
-            { className: 'portfolio-navigation__list-item' },
+            { className: navClass + '__list-item' },
             _react2.default.createElement(
               'a',
-              { href: '#my_works', className: 'portfolio-navigation__list--link' },
+              { href: '#my_works', className: navClass + '__list--link' },
               'MY WORKS'
             )
           ),
           _react2.default.createElement(
             'li',
-            { className: 'portfolio-navigation__list-item' },
+            { className: navClass + '__list-item' },
             _react2.default.createElement(
               'a',
-              { href: '#contact_me', className: 'portfolio-navigation__list--link' },
+              { href: '#contact_me', className: navClass + '__list--link' },
               'CONTACT ME'
             )
           )
@@ -21312,7 +21350,7 @@ var NavigationBar = function (_React$Component) {
 
 exports.default = NavigationBar;
 
-},{"react":178,"react-dom":27}],187:[function(require,module,exports){
+},{"classnames":1,"react":178,"react-dom":27}],187:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21354,29 +21392,33 @@ var OtherInterests = function (_React$Component) {
         { className: 'portfolio-section' },
         _react2.default.createElement(
           'div',
-          { className: 'portfolio-other_interests' },
+          { className: 'portfolio-section--anchor', id: 'other_interests' },
           _react2.default.createElement(
             'div',
-            { className: 'portfolio-other_interests--header' },
+            { className: 'portfolio-other_interests' },
             _react2.default.createElement(
-              'h1',
-              { className: 'in' },
-              'Other Interests'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'portfolio-other_interests--content' },
+              'div',
+              { className: 'portfolio-other_interests--header' },
+              _react2.default.createElement(
+                'h1',
+                { className: 'in' },
+                'Other Interests'
+              )
+            ),
             _react2.default.createElement(
-              'h3',
-              null,
-              'I love Quadcopters and soccer!!!'
+              'div',
+              { className: 'portfolio-other_interests--content' },
+              _react2.default.createElement(
+                'h3',
+                null,
+                'I love Quadcopters and soccer!!!'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'portfolio-other_interests--drone' },
+              _react2.default.createElement('img', { className: 'img-responsive img-center', id: 'drone', src: 'assets/images/robots-police-drone.png', alt: '' })
             )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'portfolio-other_interests--drone' },
-            _react2.default.createElement('img', { className: 'img-responsive img-center', id: 'drone', src: 'assets/images/robots-police-drone.png', alt: '' })
           )
         )
       );
@@ -21404,10 +21446,6 @@ var _react2 = _interopRequireDefault(_react);
 var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _classnames = require('classnames');
-
-var _classnames2 = _interopRequireDefault(_classnames);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21458,7 +21496,7 @@ var ScrollToTop = function (_React$Component) {
 
 exports.default = ScrollToTop;
 
-},{"classnames":1,"react":178,"react-dom":27}],189:[function(require,module,exports){
+},{"react":178,"react-dom":27}],189:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -21500,185 +21538,189 @@ var TechnologyStack = function (_React$Component) {
         { className: 'portfolio-section portfolio-section--dark' },
         _react2.default.createElement(
           'div',
-          { className: 'portfolio-technology_stack' },
+          { className: 'portfolio-section--anchor', id: 'technology_stack' },
           _react2.default.createElement(
             'div',
-            { className: 'portfolio-technology_stack--header' },
-            _react2.default.createElement(
-              'h1',
-              { className: 'in' },
-              'Technology Stack'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'portfolio-technology_stack--content' },
+            { className: 'portfolio-technology_stack' },
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-image--item' },
+              { className: 'portfolio-technology_stack--header' },
               _react2.default.createElement(
-                'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/html5.png', alt: '' })
-              ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'HTML 5'
+                'h1',
+                { className: 'in' },
+                'Technology Stack'
               )
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-image--item' },
+              { className: 'portfolio-technology_stack--content' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/css3.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/html5.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'HTML 5'
+                )
               ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'CSS 3'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/js.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/css3.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'CSS 3'
+                )
               ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'javascript'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/jquery.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/js.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'javascript'
+                )
               ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'jQuery'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/mongodb.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/jquery.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'jQuery'
+                )
               ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'Mongo DB'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/express.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/mongodb.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'Mongo DB'
+                )
               ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'Express'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/angular.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/express.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'Express'
+                )
               ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'Angular'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/nodejs.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/angular.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'Angular'
+                )
               ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'Node.js'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/mysql.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/nodejs.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'Node.js'
+                )
               ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'MySQL'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/laravel.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/mysql.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'MySQL'
+                )
               ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'Laravel'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/codeigniter.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/laravel.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'Laravel'
+                )
               ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'CodeIgniter'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/backbone.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/codeigniter.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'CodeIgniter'
+                )
               ),
               _react2.default.createElement(
-                'h2',
-                null,
-                'Backbone.js'
+                'div',
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/backbone.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'Backbone.js'
+                )
               )
             )
           )
@@ -21734,104 +21776,108 @@ var WhatIDo = function (_React$Component) {
         { className: 'portfolio-section' },
         _react2.default.createElement(
           'div',
-          { className: 'portfolio-what', id: 'what_i_do' },
+          { className: 'portfolio-section--anchor', id: 'what_i_do' },
           _react2.default.createElement(
             'div',
-            { className: 'portfolio-what--header' },
-            _react2.default.createElement(
-              'h1',
-              { className: 'scrollimation scale-in' },
-              'What I Do'
-            ),
+            { className: 'portfolio-what' },
             _react2.default.createElement(
               'div',
-              null,
+              { className: 'portfolio-what--header' },
               _react2.default.createElement(
-                'p',
-                null,
-                'I\'m a web application developer. I\'m passionate about building',
-                _react2.default.createElement('br', null),
-                'applications using latest web technologies.'
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'portfolio-what--content' },
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
+                'h1',
+                { className: 'scrollimation scale-in' },
+                'What I Do'
+              ),
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/web_design.png', alt: '' })
-              ),
-              _react2.default.createElement(
-                'h2',
                 null,
-                'Web & App Design'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Responsive Web, Story boarding, wireframes, sass'
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'I\'m a web application developer. I\'m passionate about building',
+                  _react2.default.createElement('br', null),
+                  'applications using latest web technologies.'
+                )
               )
             ),
             _react2.default.createElement(
               'div',
-              { className: 'portfolio-image--item' },
+              { className: 'portfolio-what--content' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/web_development.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/web_design.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'Web & App Design'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'Responsive Web, Story boarding, wireframes, sass'
+                )
               ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'Web Development'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'DOM, Scripting, Templating, Prototypes, Real-time Web'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/seo.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/web_development.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'Web Development'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'DOM, Scripting, Templating, Prototypes, Real-time Web'
+                )
               ),
-              _react2.default.createElement(
-                'h2',
-                null,
-                'SEO Content'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Robots.txt, Google Webmaster, Meta Tags, Site.xml'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'portfolio-image--item' },
               _react2.default.createElement(
                 'div',
-                { className: 'icon' },
-                _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/cloud.png', alt: '' })
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/seo.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'SEO Content'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'Robots.txt, Google Webmaster, Meta Tags, Site.xml'
+                )
               ),
               _react2.default.createElement(
-                'h2',
-                null,
-                'Cloud'
-              ),
-              _react2.default.createElement(
-                'p',
-                null,
-                'Load Balancing, Elastic Bean Stalk, Web Deployment'
+                'div',
+                { className: 'portfolio-image--item' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'icon' },
+                  _react2.default.createElement('img', { className: 'img-responsive img-center', src: 'assets/images/cloud.png', alt: '' })
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  null,
+                  'Cloud'
+                ),
+                _react2.default.createElement(
+                  'p',
+                  null,
+                  'Load Balancing, Elastic Bean Stalk, Web Deployment'
+                )
               )
             )
           )
