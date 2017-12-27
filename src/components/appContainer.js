@@ -21,7 +21,8 @@ export default class AppContainer extends React.Component {
     };
   }
   handleScroll = (event) => {
-    let scrollTop = event.srcElement.body.scrollTop,
+    
+    let scrollTop = document.documentElement.scrollTop,
         itemTranslate = Math.min(0, scrollTop/3 - 60);
 
     if(scrollTop < 50) {

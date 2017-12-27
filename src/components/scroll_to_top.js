@@ -7,6 +7,8 @@ export default class ScrollToTop extends React.Component {
   }
   render(){
       const {showScrollTop} = this.props;
+      console.log(showScrollTop);
+
       return (
         showScrollTop && <div className="portfolio-go_top" onClick={this.rollUp}>
             <span><i className="fa fa-angle-up" aria-hidden="true"></i></span>
