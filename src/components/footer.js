@@ -9,7 +9,7 @@ export default class FooterBar extends React.Component {
           <i id="icon-github" className="fa fa-github" aria-hidden="true"></i> Powered by github</div>
           <div className='portfolio-footer--brand'>
             <span className='portfolio-footer--copy-rights'>&#169; </span>
-            2017 Jayadev Akkiraju
+            {(new Date().getFullYear())} Jayadev Akkiraju
           </div>
       </div>
     )

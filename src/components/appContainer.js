@@ -49,7 +49,7 @@ export default class AppContainer extends React.Component {
 
         if( window.pageYOffset === 0 )
             clearInterval(timerID);
-    }, 13);
+    }, 20);
   }
   componentDidMount() {
       window.addEventListener('scroll', this.handleScroll);
